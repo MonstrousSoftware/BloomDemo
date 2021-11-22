@@ -12,5 +12,5 @@ void main()
 	vec4 color = texture2D(u_texture, v_texCoord0);
     vec4 color2 = texture2D(u_highlightTexture, v_texCoord0);
 
-    gl_FragColor = color + color2;
+    gl_FragColor = color + color2 *2.0;     // change the constant for effect
 }

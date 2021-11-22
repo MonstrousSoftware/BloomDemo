@@ -50,6 +50,7 @@ public class Main extends ApplicationAdapter {
 		parameter.size = 128; // font size
 		font = generator.generateFont(parameter);
 		generator.dispose(); // avoid memory leaks, important
+		font.setColor(0.7f,1.0f, 1.0f, 1.0f);		// use a bright colour
 
 		text = "Bloom";
 		GlyphLayout layout = new GlyphLayout(font, text);
@@ -109,6 +110,7 @@ public class Main extends ApplicationAdapter {
 		ScreenUtils.clear(0, 0.1f, 0.2f, 1);
 		batch.begin();
 		batch.draw(img, 0,0);
+
 		font.draw(batch, text, textX, textY);
 		batch.end();
 	}
